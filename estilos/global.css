@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    font-size: 62.5%;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    min-height: 100vh;
+    flex: 1;  
+   
+}
+/* header{
+    min-height: 10vh;
+} */
+
+footer{
+    min-height: 20vh;
+}
