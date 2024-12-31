@@ -1,8 +1,8 @@
 
 gsap.registerPlugin(ScrollToPlugin);
 
-// Selecciona todos los enlaces dentro del header
-document.querySelectorAll('header a').forEach(anchor => {
+// Selecciona todos los enlaces dentro del header y la clase btn
+document.querySelectorAll('header a, .btn a').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
 
