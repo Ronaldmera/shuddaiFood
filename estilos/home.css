@@ -41,11 +41,38 @@
     color: rgb(233, 215, 53);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: oblique;
+    transition: transform 0.3s ease-out;
+
 }
 .content p{
     font-size: 2.2rem;
     font-family: sans-serif;
     text-shadow: 1px 1px 10px rgb(231, 243, 233);
+    transition: transform 0.3s ease-out;
+}
+.content .btn{
+    background-color:  rgb(215, 238, 206);
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: .8;
+}
+.btn a{
+    text-decoration: none;
+    color:  black;
+    font-style: oblique;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.content h1:hover{
+    /* transform: scale(1.2); */
+    transform: translateY(10px);
+
+}
+.content p:hover{
+ transform: translateY(-4px); 
+}
+.content .btn:hover{
+    opacity: 1;
 }
 @media (max-width: 480px) {
     #home picture, #home img{
@@ -63,6 +90,9 @@
     font-size: 1.5rem;
 
    }
+   .content .btn{
+    font-size: 1rem;
+   }
    
 }
 
@@ -77,6 +107,9 @@
        .content p{
         font-size: 1.8rem;
     
+       }
+       .content .btn{
+        font-size: 1.2rem;
        }
        
 
@@ -94,11 +127,17 @@
         font-size: 1.8rem;
     
        }
+       .content .btn{
+        font-size: 1.4rem;
+       }
        
     
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
+    .content .btn{
+        font-size: 1.6rem;
+       }
   
 }
 
