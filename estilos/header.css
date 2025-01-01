@@ -46,7 +46,7 @@
 }
 
 .items a:hover {
-    border-color: white;
+    border-color: rgb(229, 106, 72);
 }
 @media (max-width: 480px) {
     .container {

@@ -51,7 +51,7 @@
     transition: transform 0.3s ease-out;
 }
 .content .btn{
-    background-color:  rgb(215, 238, 206);
+    background-color:  rgb(229, 106, 72);
     font-size: 2rem;
     padding: 10px;
     border-radius: 10px;
@@ -59,8 +59,9 @@
 }
 .btn a{
     text-decoration: none;
-    color:  black;
+    color: whitesmoke;
     font-style: oblique;
+    font-weight: bolder;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .content h1:hover{
