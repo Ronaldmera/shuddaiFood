@@ -1,3 +1,7 @@
+header a.active {
+    /* color: #007bff;  */
+    border-bottom: 2px solid#E56A48;
+  }
 .container {
     display: flex;
     height: 13vh;
@@ -46,7 +50,7 @@
 }
 
 .items a:hover {
-    border-color: rgb(229, 106, 72);
+    border-color: white;
 }
 @media (max-width: 480px) {
     .container {
