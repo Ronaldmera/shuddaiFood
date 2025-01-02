@@ -1,24 +1,24 @@
+/*contenedor padre*/
 #location{
     display: flex;
     flex-direction: column;
     margin-top: 13vh;
     position: relative;
     align-items: center;
-    
-    /* background-color: aqua; */
     min-height: 100vh;
     
 }
+/*titulo del contenedor*/
 #location h2{
     font-size: 3rem;
     text-align: center;
     position: relative;
     top: 4vh;
     font-family:'Courier New', Courier, monospace;
-    margin: 0; 
     margin-bottom: 8vh;
 
 }
+/*se agrega contenido despues del h2*/
 #location h2::after {
     content: '☆☆☆☆☆';
     display: block;
@@ -26,10 +26,12 @@
     color: #E56A48;
     font-size: 2rem;
 }
+/*contendor donde se muestra el mapa Leaflet*/
 #map {    
     height: 80vh;
+    z-index: 1;
     width: 90%;
-    border: 3px solid #E56A48; /* Opcional: para darle un borde */
-    border-radius: 8px; /* Opcional: esquinas redondeadas */
+    border: 3px solid #E56A48; 
+    border-radius: 8px;
   }
   
