@@ -1,11 +1,12 @@
+/*contenedor padre de menú*/
 #menu{
     position: relative;
     top: 13vh;
-    /* background-color: aqua; */
     min-height: 100vh;
     background-color:  #E8E5E3;
     
 }
+/*titulo del menú*/
 #menu h2 {
     color: black;
     font-size: 3rem;
@@ -16,7 +17,7 @@
     margin: 0; 
     margin-bottom: 9vh;
 }
-
+/*contenido agregado despues del h2*/
 #menu h2::after {
     content: '☆☆☆☆☆';
     display: block;
@@ -25,12 +26,14 @@
     /* margin-top: -40px;  */
     font-size: 2rem;
 }
+/*contenedor padre de cada elemento del menú*/
 .container-menu {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 10px; /* Ajusta este valor para controlar la separación entre las tarjetas */
-    margin-top: 7vh;
+    grid-gap: 10px;
+    padding: 0px 0px 20px  0px;
 }
+/*card de cada elemento menú*/
 .menu-item{
     display: flex;
     flex-direction: column;
@@ -44,6 +47,7 @@
     transition: transform 0.3s ease-out;
    
 }
+/*imagen de cada elemento*/
 .menu-item img{
     max-width: 100%;
     max-height: 100px;
@@ -51,8 +55,7 @@
     border-radius: 20px;
     /* background-position: center; */
 }
-
-
+/*contenedor padre de la informacion de cada elemento*/
 .item-info {
     display: flex;
     flex-direction: column;
@@ -63,17 +66,19 @@
     position: relative;
     padding-bottom: 55px; 
 }
+/*titulo de cada elemento de la card*/
 .item-info h4{
     font-size: 2rem;
    font-family:'Times New Roman', Times, serif;
     font-style: oblique;
 }
+/*descripcion de cada card*/
 .item-info p{
     text-align:center;
     font-size:1.6rem ;
     
 }
-
+/*precio en cada card*/
 .item-info .price {
     background-color: #e56a48ad;
     border-radius: 10px;
@@ -119,8 +124,6 @@
     .container-menu {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        /* grid-gap: 6px; */
-        
     }
   
     .menu-item:hover{
@@ -143,6 +146,9 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
         grid-gap: 6px;
+    }
+    .menu-item{
+        margin-bottom: 10px;
     }
   
     .menu-item:hover{
@@ -167,6 +173,9 @@
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         grid-gap: 6px;
     }
+    .menu-item{
+        margin-bottom: 10px;
+    }
   
     .menu-item:hover{
         transform: scale(1.02);
@@ -183,7 +192,9 @@
 }
 
 @media (min-width: 1441px) {
-
+    .menu-item{
+        margin-bottom: 10px;
+    }
 }
 
 
