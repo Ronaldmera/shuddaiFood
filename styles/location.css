@@ -1,0 +1,35 @@
+#location{
+    display: flex;
+    flex-direction: column;
+    margin-top: 13vh;
+    position: relative;
+    align-items: center;
+    
+    /* background-color: aqua; */
+    min-height: 100vh;
+    
+}
+#location h2{
+    font-size: 3rem;
+    text-align: center;
+    position: relative;
+    top: 4vh;
+    font-family:'Courier New', Courier, monospace;
+    margin: 0; 
+    margin-bottom: 8vh;
+
+}
+#location h2::after {
+    content: '☆☆☆☆☆';
+    display: block;
+    text-align: center;
+    color: #E56A48;
+    font-size: 2rem;
+}
+#map {    
+    height: 80vh;
+    width: 90%;
+    border: 3px solid #E56A48; /* Opcional: para darle un borde */
+    border-radius: 8px; /* Opcional: esquinas redondeadas */
+  }
+  
