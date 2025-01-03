@@ -1,6 +1,6 @@
 // Coordenadas reales 
-const lat = 2.678809; // Latitud
-const lng = -76.562124; // Longitud
+const lat = 9.187460; // Latitud
+const lng = -75.555972; // Longitud
 
 // Inicializar el mapa con las coordenadas reales
 const map = L.map('map', {
