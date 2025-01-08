@@ -1,8 +1,9 @@
+/*seccion de contacto*/
 #contact{
- 
     background-color:  #E8E5E3;
     min-height: 60vh;
 }
+/*subtitulo de la seccion contacto*/
 #contact h2{
     font-size: 3rem;
     text-align: center;
@@ -11,6 +12,7 @@
     margin-bottom: 6vh;
     font-family:'Courier New', Courier, monospace;
 }
+/*contenido que se agrega despues del subtitulo*/
 #contact h2::after{
     content: '☆☆☆☆☆';
     display: block;
@@ -18,6 +20,7 @@
     color: #E56A48;
     font-size: 2rem;
 }
+/*caja padre que almacena todos los items*/
 .box{
     display: flex;
     flex: 1;
@@ -25,23 +28,97 @@
     flex-wrap: wrap;
     justify-content:space-evenly;
 }
+/*cada item de la seccion contacto*/
 .contact-item{
     display: flex;
     flex-direction: column;
     height: 150px;
     width: 300px;
-    /* background-color: aqua; */
     text-align: center;
     align-items: center;
     justify-content: center;
 }
+/*texto de cada items*/
 .contact-item p{
     font-size: 2rem;
     font-family: 'quicksand';
 }
+/*link de cada item*/
 .contact-item a{
     text-decoration: none;
 }
+/*icono de cada item*/
 .contact-item img{
     width: 50px;
+}
+
+@media (max-width: 480px) {
+    #contact h2{
+        font-size: 2rem;
+    }
+    .box{
+        display: flex;
+        justify-content:space-around;
+    }
+    .contact-item{
+        height:auto;
+        width: 150px;
+    }
+    .contact-item p{
+        font-size: 1.5rem;
+    }
+    .contact-item img{
+        width: 25px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    #contact h2{
+        font-size: 2.2rem;
+    }
+    .contact-item{
+        height:80px;
+        width: 180px;
+    }
+    .contact-item p{
+        font-size: 1.6rem;
+    }
+    .contact-item img{
+        width: 35px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #contact h2{
+        font-size: 2.5rem;
+    }
+    .contact-item{
+        height:100px;
+        width: 220px;
+    }
+    .contact-item p{
+        font-size: 1.7rem;
+    }
+    .contact-item img{
+        width: 40px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    #contact h2{
+        font-size: 2.8rem;
+    }
+    .contact-item{
+        height:130px;
+        width: 250px;
+    }
+    .contact-item p{
+        font-size: 1.7rem;
+    }
+    .contact-item img{
+        width: 45px;
+    }
+}
+
+@media (min-width: 1441px) {
 }
