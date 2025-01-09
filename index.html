@@ -21,6 +21,10 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
+  <!-- script libreria  AOS (Animate On Scroll)-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
 
   <!-- link stilos-->
   <link rel="stylesheet" href="styles/global.css" />
@@ -34,6 +38,7 @@
   <!-- script js-->
   <script src="script/transition-header-click.js" defer></script>
   <script src="script/map.js" defer></script>
+  <script src="script/aos.js"></script>
 </head>
 
 <body>
@@ -76,7 +81,7 @@
       </div>
     </section>
     <!-- menu-->
-    <section id="menu">
+    <section id="menu" data-aos="fade">
       <h2>MENÚ</h2>
       <div class="container-menu">
         <div class="menu-item">
@@ -133,7 +138,7 @@
       </div>
     </section>
     <!-- ubicacion-->
-    <section id="location">
+    <section id="location" data-aos="fade">
       <h2>Nuestra Ubicación</h2>
       <div id="map"></div>
       <div class="schedule">
@@ -164,7 +169,7 @@
       </div>
     </section>
     <!-- contacto-->
-    <section id="contact">
+    <section id="contact" data-aos="fade">
       <h2>Contáctanos</h2>
       <div class="box">
         <div class="contact-item">
@@ -206,13 +211,13 @@
   </main>
   <!-- footer-->
   <footer>
-    <div class="first">
+    <div class="first" data-aos="fade">
       <img src="icono.ico" alt="icono Shaddai Food">
       <p>
         © 2025 El Shaddai Food. Todos los derechos reservados.</p>
 
     </div>
-    <div class="second">
+    <div class="second" data-aos="fade">
       <p>Siguenos en nuestras redes</p>
       <div class="icons">
         <a href="" target="_blank"><img src="img/footer/whatsapp.svg" alt=""></a>
