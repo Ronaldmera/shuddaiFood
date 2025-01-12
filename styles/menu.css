@@ -6,6 +6,24 @@
     background-color:  #E8E5E3;
     
 }
+/*comtenedor padre de la imagen de fondo*/
+.container-imgf{
+    display: flex;
+    width: 100%; 
+    position: absolute;
+    margin: 0 auto;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: -5;
+}
+/*imagen de fondo*/
+.container-imgf img{
+    max-width: 75%;
+    min-width: 200px;
+    opacity: .4;
+    filter: drop-shadow(10px 10px 15px rgba(255, 0, 0, 0.541));/*agrega sombra a una imagen con fondo transparente*/
+}
 /*titulo del menú*/
 #menu h2 {
     color: black;

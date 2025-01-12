@@ -3,6 +3,25 @@
     background-color:  #E8E5E3;
     min-height: 60vh;
 }
+/*contenedor padre de la imagen de fondo*/
+.container-img{
+    display: flex;
+    width: 100%; 
+    position: absolute;
+    margin: 0 auto;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: -5;
+}
+/*imagen de fondo*/
+.container-img img{
+    max-width: 75%;
+    min-width: 200px;
+    opacity: .1;
+    filter: drop-shadow(10px 10px 15px rgba(255, 0, 0, 0.541));/*agrega sombra a una imagen con fondo transparente*/
+}
+
 /*subtitulo de la seccion contacto*/
 #contact h2{
     font-size: 3rem;
