@@ -56,6 +56,7 @@
     text-align: center;
     align-items: center;
     justify-content: center;
+    transition: .3s ease;
 }
 /*texto de cada items*/
 .contact-item p{
@@ -64,11 +65,16 @@
 }
 /*link de cada item*/
 .contact-item a{
+    color: rgb(60, 71, 75);
     text-decoration: none;
+    font-family: 'quicksand';
 }
 /*icono de cada item*/
 .contact-item img{
     width: 50px;
+}
+.contact-item:hover{
+    transform: scale(1.07);
 }
 
 @media (max-width: 480px) {
