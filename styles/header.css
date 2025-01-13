@@ -140,8 +140,7 @@ header a.active {
 
 @media (min-width: 1441px) {
     .container {
-        justify-content: center;
-    
+        justify-content: space-around;
     }
 
     .logo img{
