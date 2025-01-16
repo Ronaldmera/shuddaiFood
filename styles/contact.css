@@ -146,4 +146,7 @@
 }
 
 @media (min-width: 1441px) {
+    #contact{
+        min-height: 65vh;
+    }
 }
