@@ -27,7 +27,7 @@ L.marker([lat, lng])
   .addTo(map)
   .bindPopup(`
     <div style="font-size: 16px; font-weight: bold; color: #E56A48; text-align: center;">
-      ¡Aquí estamos! <br> El Shaddai Food.
+      ¡Aquí estamos! <br> El Shuddai Food.
     </div>
   `)
   .openPopup();
