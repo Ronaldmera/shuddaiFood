@@ -37,8 +37,9 @@
 
 .content h1{
     font-size: 4rem;
-    text-shadow: 1px 1px 10px rgba(101, 216, 116, 0.699);
-    color: rgb(233, 215, 53);
+    text-shadow: 2px 3px 2px rgba(240, 147, 25, 0.699);
+    /* color: rgb(233, 215, 53); */
+    color:  rgb(230, 213, 137);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: oblique;
     transition: transform 0.3s ease-out;
