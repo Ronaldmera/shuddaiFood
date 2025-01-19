@@ -55,7 +55,6 @@
     display: flex;
     background-color:  rgb(229, 106, 72);
     font-size: 2rem;
-  
     border-radius: 10px;
     opacity: .8;
 }
@@ -92,7 +91,7 @@
 
    }
    .content .btn{
-    font-size: 1rem;
+    font-size: 1.3rem;
    }
    
 }
@@ -110,7 +109,7 @@
     
        }
        .content .btn{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
        }
        
 
@@ -129,7 +128,7 @@
     
        }
        .content .btn{
-        font-size: 1.4rem;
+        font-size: 1.7rem;
        }
        
     
@@ -137,7 +136,7 @@
 
 @media (min-width: 1025px) and (max-width: 1440px) {
     .content .btn{
-        font-size: 1.6rem;
+        font-size: 1.8rem;
        }
   
 }
