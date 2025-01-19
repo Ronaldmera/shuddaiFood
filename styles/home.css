@@ -68,13 +68,9 @@
     padding:10px;
 }
 .content h1:hover{
-    /* transform: scale(1.2); */
     transform: translateY(10px);
+}
 
-}
-.content p:hover{
- transform: translateY(-4px); 
-}
 .content .btn:hover{
     opacity: 1;
 }
