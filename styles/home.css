@@ -143,5 +143,9 @@
 }
 
 @media (min-width: 1441px) {
+    .content p{
+        padding: 0 20rem;
+        /* text-align: justify; */
+    }
 
 }
