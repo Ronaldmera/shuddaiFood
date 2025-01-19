@@ -65,7 +65,7 @@
 }
 /*link de cada item*/
 .contact-item a{
-    color: rgb(60, 71, 75);
+    color:black;
     text-decoration: none;
     font-family: 'quicksand';
 }
