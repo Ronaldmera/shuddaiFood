@@ -16,10 +16,11 @@ header a.active {
     border-bottom: 1px solid rgba(128, 128, 128, 0.205);
     padding: 0 20px;
     flex-wrap: wrap;
+    font-size: 15px;
 }
 
 .logo img {
-    height: 85px;
+    height: 120px;
     width: auto;
     border-radius: 50%;
     transition: transform 0.3s ease;
@@ -31,128 +32,71 @@ header a.active {
     transform: scale(1.1);
 }
 
-.items {
+.nav-links{
     display: flex;
-    font-size: 1.6rem;
-    height: 40px;
-    gap: 60px;
+    flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+    list-style: none;
+    gap: 50px;
 }
-
-.items a {
+.nav-links a{
     text-decoration: none;
-    color: aliceblue;
-    border-bottom: 2px solid transparent;
+    color: white;
+    font-family: quicksand;
+    height: 23px;
     transition: color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-bottom: 2px solid transparent;
+    padding: 5px;
 }
-
-.items a:hover {
+.nav-links a:hover{
+    position: relative;
+    border-bottom: 2px solid #E56A48;
     border-color: white;
 }
-@media (max-width: 480px) {
-    .container {
-        flex-direction: column;
-        height: 13vh;
-        padding: 5px;
-        align-items: center;
-    }
-    .logo img{
-      height: 50px;
-    }
+.hamburguer{
+    display:none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.bar{
+    width: 25px;
+    height: 3px;
+    background-color: whitesmoke;
+    margin: 4px 0;
+    transition: 0.4s;
+}
 
-    .items {
-        justify-content: center;
+/*con el ancho maximo de 768px se ocultan los links y se muestra el menu amburguesa*/
+@media (max-width: 768px){
+    .container{
+        display: flex;
+        justify-content:space-between;
+        padding: 0 20px;
+    }
+    .logo img {
+        height: 85px;
+    }
+    .nav-links{
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0%;
+        width: 40%;
+        flex-direction: column;
+        text-align: center;;
+        border-radius: 0 0 10px 10px;
         gap: 10px;
     }
-
-    .items a {
-        font-size: 1.4rem;
-        padding: 10px 8px;
+    .nav-links li{
+        margin: 15px 0;
     }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-    .container {
-        flex-direction: row;
-        height: 13vh;
-        padding: 10px;
-        align-items: center;
+    .hamburguer{
+        display: flex;
     }
+    .nav-links.show{
+        display: flex;
+        background-color: #6e534b;
+  }
+  
 
-    .logo img{
-      height: 70px;
-    }
-    .items {
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .items a {
-        font-size: 1.4rem;
-        padding: 6px 12px;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .container {
-        flex-direction: row;
-        justify-content: space-around;
-        height: 13vh;
-    }
-    .logo img{
-      height: 90px;
-    }
-
-    .items {
-        justify-content: space-around;
-        gap: 30px;
-    }
-
-    .items a {
-        font-size: 1.5rem;
-        padding: 8px 15px;
-    }
-}
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-    .container {
-        justify-content: space-around;
-    }
-
-    .logo img{
-        height: 105px;
-      }
-
-    .items {
-        justify-content: space-around;
-        gap: 40px;
-    }
-
-    .items a {
-        font-size: 1.6rem;
-        padding: 5px 20px;
-    }
-}
-
-@media (min-width: 1441px) {
-    .container {
-        justify-content: space-around;
-    }
-
-    .logo img{
-        height: 120px;
-      }
-
-    .items {
-        justify-content: center;
-        gap: 50px;
-    }
-
-    .items a {
-        font-size: 1.8rem;
-        padding: 7px 25px;
-    }
 }

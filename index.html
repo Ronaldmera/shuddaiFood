@@ -45,6 +45,7 @@
   <script src="script/transition-header-click.js" defer></script>
   <script src="script/map.js" defer></script>
   <script src="script/aos.js" defer></script>
+  <script src="script/hamburguer.js" defer></script>
 </head>
 
 <body>
@@ -54,12 +55,18 @@
         <img src="shuddai.ico" />
       </div>
       <nav>
-        <div class="items">
-          <a href="#home">Home</a>
-          <a href="#menu">Menú</a>
-          <a href="#location">Ubicación</a>
-          <a href="#contact">Contacto</a>
+        <ul class="nav-links" id="nav-links">
+          <li> <a href="#home">Home</a></li>
+          <li> <a href="#menu">Menú</a></li>
+          <li> <a href="#location">Ubicación</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+        <div class="hamburguer" id="hamburguer">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
+
       </nav>
     </div>
   </header>
