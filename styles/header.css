@@ -68,6 +68,9 @@ header a.active {
 
 /*con el ancho maximo de 768px se ocultan los links y se muestra el menu amburguesa*/
 @media (max-width: 768px){
+    header a.active {
+        border-bottom: none;
+      }
     .container{
         display: flex;
         justify-content:space-between;
@@ -103,9 +106,18 @@ header a.active {
         gap: 10px;
     }
 
-    .nav-links li{
+    .nav-links li {
         margin: 15px 0;
+        display: flex;
+        width: 100%;
     }
+    
+    .nav-links li a {
+        width: 100%;
+        position: relative;
+        bottom: 2px;
+    }
+    
     .hamburguer{
         display: flex;
     }

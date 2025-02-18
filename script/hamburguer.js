@@ -11,3 +11,7 @@ document.addEventListener("click", function (event) {
         enlaces.classList.remove("show");
     }
 });
+
+enlaces.addEventListener('click', () => {
+    enlaces.classList.remove('show');
+});
