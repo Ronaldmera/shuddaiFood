@@ -76,7 +76,7 @@ header a.active {
     .logo img {
         height: 85px;
     }
-    .nav-links{
+    /* .nav-links{
         display: none;
         position: absolute;
         top: 100%;
@@ -86,17 +86,36 @@ header a.active {
         text-align: center;;
         border-radius: 0 0 10px 10px;
         gap: 10px;
+    } */
+    .nav-links {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40%;
+        flex-direction: column;
+        text-align: center;
+        border-radius: 0 0 10px 10px;
+        background-color:#6e534b;
+        gap: 10px;
     }
+
     .nav-links li{
         margin: 15px 0;
     }
     .hamburguer{
         display: flex;
     }
-    .nav-links.show{
+    /* .nav-links.show{
         display: flex;
         background-color: #6e534b;
-  }
-  
+  } */
+  .nav-links.show {
+    max-height: 300px; /* Ajusta según el contenido */
+    opacity: 1;
+}
 
 }
