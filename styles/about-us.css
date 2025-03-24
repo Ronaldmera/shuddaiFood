@@ -1,0 +1,107 @@
+#about-us{
+    display: flex;
+    position: relative;
+    top: 7vh;
+    flex-direction: row;
+    min-height: 90vh;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1500px;
+    gap: 100px;
+    padding:100px;
+}
+#about-us .inf{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+#about-us .inf p{
+    font-size: 1.8rem;
+    font-family: quicksand;
+}
+#about-us .inf h2{
+    width: 50%;
+    font-size: 3rem;
+}
+#about-us .about-img{
+    flex: 1;
+    display: flex;
+   justify-content: center;
+}
+#about-us .about-img img{
+    width: 90%;
+    border-radius: 4px;
+    object-fit: cover;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+    #about-us .inf h2{
+        width: 100%;
+    }
+    #about-us .about-img img{
+        min-width: 400px;
+    }
+}
+
+@media (max-width: 1024px) {
+    #about-us{
+        display: flex;
+        position: relative;
+        top: 7vh;
+        flex-direction: row;
+        min-height: 90vh;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 1500px;
+        gap: 50px;
+        padding: 100px 60px;
+    }
+    #about-us .inf h2{
+        width: 100%;
+    }
+    #about-us .about-img img{
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    #about-us{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding: 100px 30px;
+    }
+    #about-us .inf{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        padding: 20px;
+    }
+    #about-us .inf p{
+        font-size: 1.8rem;
+        font-family: quicksand;
+    }
+    #about-us .about-img img{
+        min-width: 300px;
+    }
+    #about-us .inf h2{
+        width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    #about-us{
+        display: flex;
+        flex-direction: column;
+    }
+    #about-us .inf p{
+        font-size: 1.6rem;
+    }
+    #about-us .about-img img{
+        min-width: 300px;
+    }
+    #about-us .inf h2{
+        font-size: 2.5rem;
+        width: 100%;
+    }
+}

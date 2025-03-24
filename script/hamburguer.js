@@ -11,7 +11,7 @@ document.addEventListener("click", function (event) {
         enlaces.classList.remove("show");
     }
 });
-
+//al tocar dar click en un enlcace se cierra el menu esto es ya que es una sola vista o pagina estatica
 enlaces.addEventListener('click', () => {
     enlaces.classList.remove('show');
 });

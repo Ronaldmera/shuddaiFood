@@ -1,10 +1,10 @@
 /*contenedor padre de menú*/
 #menu{
     position: relative;
-    top: 13vh;
+    top: 7vh;
     min-height: 100vh;
-    background-color:  #E8E5E3;
-    
+    max-width: 1500px;
+    margin: 0 auto;
 }
 /*comtenedor padre de la imagen de fondo*/
 .container-imgf{

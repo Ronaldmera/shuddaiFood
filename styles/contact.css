@@ -1,23 +1,29 @@
 /*seccion de contacto*/
 #contact{
-    background-color:  #E8E5E3;
     min-height: 60vh;
+    margin: 0 auto;
+    max-width: 1500px;
+    overflow: hidden;
+    position: relative;
+    top: 14vh;
+    margin-bottom: 10vh;
 }
 /*contenedor padre de la imagen de fondo*/
-.container-img{
+.container-img {
     display: flex;
-    width: 100%; 
+    max-width: 1500px; 
     position: absolute;
-    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
     height: 100%;
     align-items: center;
     justify-content: center;
     z-index: -5;
 }
+
 /*imagen de fondo*/
 .container-img img{
     max-width: 75%;
-    min-width: 200px;
     opacity: .1;
     filter: drop-shadow(10px 10px 15px rgba(255, 0, 0, 0.541));/*agrega sombra a una imagen con fondo transparente*/
 }
