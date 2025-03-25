@@ -90,7 +90,8 @@
     font-size: 1.5rem;
 }
 .menu-item:hover{
-    transform: scale(1.05);
+    transform: scale(1.01);
+    background-color: #e6e5e5;
 }
 
 @media (min-width: 1441px) {
