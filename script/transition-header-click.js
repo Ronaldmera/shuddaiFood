@@ -11,7 +11,7 @@ document.querySelectorAll('header a, .btn a').forEach(anchor => {
     if (target) {
       // Desplaza la ventana hacia el destino con un desplazamiento suave
       gsap.to(window, {
-        scrollTo: { y: target, offsetY: 100 }, 
+        scrollTo: { y: target, offsetY: 65 }, 
         duration: 0.8,
         ease: "power2.out"
       });

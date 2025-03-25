@@ -6,30 +6,12 @@
     max-width: 1500px;
     margin: 0 auto;
 }
-/*comtenedor padre de la imagen de fondo*/
-.container-imgf{
-    display: flex;
-    width: 100%; 
-    position: absolute;
-    margin: 0 auto;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    z-index: -5;
-}
-/*imagen de fondo*/
-.container-imgf img{
-    max-width: 75%;
-    min-width: 200px;
-    opacity: .4;
-    filter: drop-shadow(10px 10px 15px rgba(255, 0, 0, 0.541));/*agrega sombra a una imagen con fondo transparente*/
-}
 /*titulo del menú*/
 #menu h2 {
     color: black;
     font-size: 3rem;
     text-align: center;
-    font-family:'Courier New', Courier, monospace;
+    font-family:'Times New Roman', Times, serif;
     position: relative;
     top: 5vh; 
     margin: 0; 
@@ -58,7 +40,7 @@
     gap: 20px;
     background-color: #F9F9F9;
     margin: 0 auto;
-    max-width: 250px;
+    max-width: 500px;
     max-height: 500px;
     padding: 10px;
     border-radius: 6px;
@@ -67,8 +49,7 @@
 }
 /*imagen de cada elemento*/
 .menu-item img{
-    max-width: 100%;
-    max-height: 115px;
+    height: 160px;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -97,7 +78,8 @@
 }
 /*precio en cada card*/
 .item-info .price {
-    background-color: #e56a4836;
+    background-color: #E56A48;
+    color: whitesmoke;
     border-radius: 10px;
     position: absolute;
     bottom: 10px; 
@@ -105,85 +87,33 @@
     transform: translateX(-50%);
     padding: 5px 10px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: 1.5rem;
 }
 .menu-item:hover{
     transform: scale(1.05);
 }
 
-@media (max-width: 480px) {
-    #menu h2 {
-        font-size: 2rem;
+@media (min-width: 1441px) {
+    .big-menu {
+        width: 80%;
+        margin: 0 auto;
     }
-    .container-menu {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        grid-gap: 6px; 
-    }  
-    .menu-item:hover{
-        transform: scale(1.01);
-    }
-    .item-info h4{
-        font-size: 1.4rem;
-    }
-    .item-info p{
-        font-size:1.2rem ;
-        
-    }
-   
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-    #menu h2 {
-        font-size: 2.2rem;
-    }
-    .container-menu {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    }
-  
-    .menu-item:hover{
-        transform: scale(1.02);
-    }
-    .item-info h4{
-        font-size: 1.6rem;
-    }
-    .item-info p{
-        font-size:1.3rem ;
-        
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    #menu h2 {
-        font-size: 2.5rem;
-    }
-    .container-menu {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-        grid-gap: 6px;
-    }
-    .menu-item{
+    .menu-item {
         margin-bottom: 10px;
     }
-  
-    .menu-item:hover{
-        transform: scale(1.02);
+    .menu-item img {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
     }
-    .item-info h4{
-        font-size: 1.8rem;
-    }
-    .item-info p{
-        font-size:1.5rem ;
-        
-    }
- 
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
     #menu h2 {
         font-size: 2.8rem;
     }
-    .big-menu{
+    .big-menu {
         width: 90%;
         margin: 0 auto;
     }
@@ -192,30 +122,130 @@
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         grid-gap: 6px;
     }
-    .menu-item{
+    .menu-item {
         margin-bottom: 10px;
     }
-  
-    .menu-item:hover{
+    .menu-item img {
+        width: 100%;
+        max-height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .menu-item:hover {
         transform: scale(1.02);
     }
-    .item-info h4{
+    .item-info h4 {
         font-size: 1.9rem;
     }
-    .item-info p{
-        font-size:1.6rem ;
-        
+    .item-info p {
+        font-size: 1.6rem;
     }
 }
 
-@media (min-width: 1441px) {
-    .big-menu{
-        width: 80%;
-        margin: 0 auto;
+@media (min-width: 769px) and (max-width: 1024px) {
+    #menu{
+        padding: 0 50px;
     }
-    .menu-item{
+    #menu h2 {
+        font-size: 2.5rem;
+    }
+    .container-menu {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        grid-gap: 6px;
+    }
+    .menu-item {
         margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    .menu-item img {
+        width: 100%;
+        max-height: 160px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    .menu-item:hover {
+        transform: scale(1.02);
+    }
+    .item-info h4 {
+        font-size: 2.1rem;
+    }
+    .item-info p {
+        font-size: 1.8rem;
     }
 }
 
+@media (min-width: 481px) and (max-width: 768px) {
+    #menu{
+        padding: 60px;
+    }
+    #menu h2 {
+        font-size: 2.2rem;
+    }
+    .container-menu {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    .menu-item {
+        padding: 12px;
+        border-radius: 10px;
+    }
+    .menu-item img {
+        width: 100%;
+        max-height: 140px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    .menu-item:hover {
+        transform: scale(1.02);
+    }
+    .item-info .price {
+        font-size: 1.3rem;
+    }
+    .item-info h4 {
+        font-size: 1.9rem;
+    }
+    .item-info p {
+        font-size: 1.7rem;
+    }
+}
 
+@media (max-width: 480px) {
+    #menu{
+        padding: 20px;
+    }
+    #menu h2 {
+        font-size: 2rem;
+    }
+    .container-menu {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 6px; 
+    }  
+    .menu-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    .menu-item img {
+        width: 100%;
+        max-height: 120px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+    .menu-item:hover {
+        transform: scale(1.01);
+    }
+    .item-info .price {
+        font-size: 1.3rem;
+    }
+    .item-info h4 {
+        font-size: 1.7rem;
+    }
+    .item-info p {
+        font-size: 1.5rem;
+    }
+}
