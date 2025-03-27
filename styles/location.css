@@ -2,7 +2,7 @@
 #location{
     display: flex;
     flex-direction: column;
-    top: 14vh;
+    top: 7vh;
     position: relative;
     align-items: center;
     min-height: 100vh;
@@ -40,7 +40,7 @@
     position: relative;
     margin-bottom: 6vh;
     font-size: 2rem;
-    border: 2px solid #E56A48;
+    border: 2px solid #e56a4852;
     border-radius: 2px 40px;
     padding: 20px;
     border-collapse: separate;
@@ -48,7 +48,7 @@
     transition: transform 0.3s ease;
     font-family: 'quicksand';
     width: 100%;
-    box-shadow: 1px 1px 4px black;
+    box-shadow: 1px 1px 4px #E56A48;
 }
 /*celdas donde aparece el dia y la hora*/
 .schedule table tr td{

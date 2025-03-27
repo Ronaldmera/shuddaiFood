@@ -8,7 +8,9 @@
     margin: 0 auto;
     max-width: 1500px;
     gap: 100px;
-    padding:100px;
+    padding: 0px 100px;
+    background-color:#F9F9F9;
+    border-radius: 10px;
 }
 #about-us .inf{
     display: flex;
