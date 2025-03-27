@@ -41,26 +41,25 @@
     margin-bottom: 6vh;
     font-size: 2rem;
     border: 2px solid #E56A48;
-    border-radius: 7px;
+    border-radius: 2px 40px;
     padding: 20px;
     border-collapse: separate;
     border-spacing: 20px 5px;
     transition: transform 0.3s ease;
     font-family: 'quicksand';
-    background-color: #fcf6f3;
     width: 100%;
+    box-shadow: 1px 1px 4px black;
 }
 /*celdas donde aparece el dia y la hora*/
 .schedule table tr td{
-    background-color: #e56a4879;
+    background-color: whitesmoke;
     text-align: center;
     border-radius: 5px;
     text-align: center;
     padding: 10px ;
 }
 table:hover{
-    box-shadow: 1px 1px 4px black;
-    transform: scale(1.0);
+    
 }
 
 /*media queries*/

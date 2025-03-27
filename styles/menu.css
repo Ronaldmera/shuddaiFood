@@ -52,6 +52,7 @@
     height: 160px;
     object-fit: cover;
     border-radius: 10px;
+    aspect-ratio: 16 / 9;
 }
 /*contenedor padre de la informacion de cada elemento*/
 .item-info {
