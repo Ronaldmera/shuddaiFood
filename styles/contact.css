@@ -1,60 +1,74 @@
-/*seccion de contacto*/
-#contact{
-    min-height: 60vh;
+/* Sección de contacto */
+#contact {
     margin: 0 auto;
     max-width: 1500px;
     overflow: hidden;
     position: relative;
     top: 7vh;
-    margin-bottom: 10vh;
-}
-/*contenedor padre de la imagen de fondo*/
-.container-img {
-    display: flex;
-    max-width: 1500px; 
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 100%;
-    align-items: center;
+    margin-bottom: 16vh;
+    height: 50vh;
     justify-content: center;
-    z-index: -5;
+    align-content: center;
+    overflow: hidden;
 }
-
-/*imagen de fondo*/
-.container-img img{
-    max-width: 75%;
-    opacity: .1;
-    filter: drop-shadow(10px 10px 15px rgba(255, 0, 0, 0.541));/*agrega sombra a una imagen con fondo transparente*/
-}
-
-/*subtitulo de la seccion contacto*/
-#contact h2{
+/* Subtítulo de la sección contacto */
+#contact h2 {
     font-size: 3rem;
     text-align: center;
     position: relative;
     top: 2vh;
-    margin-bottom: 6vh;
-    font-family:'Times New Roman', Times, serif;
+    margin-bottom: 10vh;
+    font-family: 'Times New Roman', Times, serif;
 }
-/*contenido que se agrega despues del subtitulo*/
-#contact h2::after{
+
+/* Contenido decorativo después del subtítulo */
+#contact h2::after {
     content: '☆☆☆☆☆';
     display: block;
     text-align: center;
     color: #E56A48;
     font-size: 2rem;
 }
-/*caja padre que almacena todos los items*/
-.box{
+
+/* Caja padre que almacena los items */
+.box {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+ }
+ 
+ /* Capa para el desvanecimiento */
+ .box::before,
+ .box::after {
+     content: "";
+     position: absolute;
+     top: 0;
+     width: 100px; /* Ajusta el ancho del desvanecimiento */
+     height: 100%;
+     z-index: 2;
+     pointer-events: none;
+ }
+ 
+ .box::before {
+     left: 0;
+     background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+ }
+ 
+ .box::after {
+     right: 0;
+     background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+ }
+ 
+.inner{
+    width: fit-content;
     display: flex;
-    flex: 1;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content:space-evenly;
+    gap: 4rem;
+    animation: loop 8s linear infinite;
+    padding: 20px;
 }
-/*cada item de la seccion contacto*/
-.contact-item{
+/* Cada item de la sección contacto */
+.contact-item {
     display: flex;
     flex-direction: column;
     height: 150px;
@@ -62,30 +76,51 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    transition: .3s ease;
+    transition: 0.3s ease;
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    box-shadow: 1px 0px 5px rgb(219, 198, 184);  
 }
-/*texto de cada items*/
-.contact-item p{
+.fade {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.671);
+}
+@keyframes loop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+} 
+.box:hover .inner {
+    animation-play-state: paused;
+}
+.contact-item:hover {
+    border: 1px solid #E56A48; /* Cambia el color según tu preferencia */
+    transition: border 0.3s ease;
+}
+
+/* Texto de cada item */
+.contact-item p {
     font-size: 2rem;
-    font-family: 'quicksand';
+    color: rgb(61, 58, 58);
 }
-/*link de cada item*/
-.contact-item a{
-    color:black;
+
+/* Link de cada item */
+.contact-item a {
+    color: black;
     text-decoration: none;
-    font-family: 'quicksand';
 }
-/*icono de cada item*/
-.contact-item img{
+
+/* Icono de cada item */
+.contact-item img {
     width: 50px;
 }
-.contact-item:hover{
-    transform: scale(1.07);
-}
+
+/* Media Queries */
 @media (min-width: 1441px) {
-    #contact {
-        min-height: 65vh;
-    }
+    
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
@@ -121,6 +156,10 @@
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
+    #contact {
+        margin-bottom: 16vh;
+        height: 40vh;
+    }
     #contact h2 {
         font-size: 2.2rem;
     }
@@ -134,21 +173,38 @@
     .contact-item img {
         width: 35px;
     }
+    .box {
+        width: 100%;
+     }
+     .inner{
+        gap: 2rem;
+    }
+    .contact-item {
+        height: 100px;
+        width: 150px;
+        overflow:hidden;
+    }
 }
-
 @media (max-width: 480px) {
     #contact h2 {
         font-size: 2rem;
     }
+    #contact {
+        margin-bottom: 16vh;
+        height: 40vh;
+    }
     .box {
-        display: flex;
-        justify-content: space-around;
+        width: 100%;
+     }
+     .inner{
+        gap: 1.5rem;
     }
     .contact-item {
-        height: auto;
-        width: 150px;
+        height: 100px;
+        width: 160px;
+        overflow:hidden;
     }
-    .contact-item p {
+    .contact-item p, .contact-item a{
         font-size: 1.5rem;
     }
     .contact-item img {

@@ -36,108 +36,147 @@
     border-radius: 8px;
 }
 /*contenedor del horario de atencion*/
-.schedule table{
-    position: relative;
-    margin-bottom: 6vh;
-    font-size: 2rem;
-    border: 2px solid #e56a4852;
-    border-radius: 2px 40px;
-    padding: 20px;
-    border-collapse: separate;
-    border-spacing: 20px 5px;
-    transition: transform 0.3s ease;
-    font-family: 'quicksand';
+.schedule{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 1vh;
+    max-width: 1500px;
     width: 100%;
-    box-shadow: 1px 1px 4px #E56A48;
+    /* background-color: #E56A48; */
+    padding: 30px;
 }
-/*celdas donde aparece el dia y la hora*/
-.schedule table tr td{
-    background-color: whitesmoke;
-    text-align: center;
-    border-radius: 5px;
-    text-align: center;
-    padding: 10px ;
+.schedule-box{
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    padding: 20px;
+    align-items: center; 
+    /* background-color:aqua;  */
+    gap: 60px;
+    overflow: hidden;
 }
-table:hover{
+.schedule-box img{
+    border-radius:10px 100px;
+    box-shadow: 1px 1px 10px rgb(26, 23, 22);
+}
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(1.5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.schedule-box .order {
+    width: 25%; 
+    max-width: 400px;
+    height: auto; 
+    animation: rotate 3s infinite;
+}
+
+.schedule-box .horario {
+    width: 75%; 
+    max-width: 900px;
+    height: auto; 
     
 }
-
-/*media queries*/
-@media (max-width: 480px) {
-    #location{
-     display: flex;
-     justify-content: center;
+@media (min-width: 1441px) {
+    .schedule-box {
+        justify-content: center;
     }
-    #location h2{
-        font-size: 2rem;
-    }
-    #map { 
-        display: flex;  
-        height: 60vh;
-    }
-    .schedule{
-        padding: 0 20px;
-    }
-    .schedule table{
-        font-size: 1.7rem;
-        padding: 10px;
-        border-collapse: separate;
-        border-spacing: 10px 5px;
-    }
-    table tr td ,table tr td{
-        font-size: 1.3rem;
-        height: 40px;
-        padding: 10px ;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-    #location h2{
-        font-size: 2.2rem;
-    }
-    #map { 
-        display: flex;  
-        height: 70vh;
-    }
-    .schedule table{
-        font-size: 2rem;
-        padding: 10px;
-        border-collapse: separate;
-        border-spacing: 10px 5px;
-    }
-    .schedule table tr td{
-        font-size: 1.3rem;
-        height: 50px;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    #location h2{
-        font-size: 2.5rem;
-    }
-    .schedule table{
-        font-size: 2.5rem;
-        padding: 10px;
-        border-collapse: separate;
-        border-spacing: 10px 5px;
-    }
-    .schedule table tr td{
-        font-size: 1.6rem;
-        height: 50px;
-    }
-
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
-    #location h2{
+    #location h2 {
         font-size: 2.8rem;
     }
+    .schedule-box {
+        padding: 30px;
+        gap: 0;
+    }
+
+    .schedule-box .order {
+        width: 25%;
+        /* max-width: 400px; */
+    }
+    .schedule-box .horario {
+        width: 75%;
+        /* max-width: 900px; */
+        max-width: 600px;
+    }
 }
-
-@media (min-width: 1441px) {
-  
+@media (min-width: 769px) and (max-width: 1024px) {
+    #location h2 {
+        font-size: 2.5rem;
+    }
+    .schedule-box {
+        flex-direction: row;
+        gap: 0;
+    }
+    .schedule-box .order {
+        width: 25%;
+        max-width: 350px;
+    }
+    .schedule-box .horario {
+        width: 75%;
+        max-width: 400px;
+    }
 }
+@media (min-width: 481px) and (max-width: 768px) {
+    #location h2 {
+        font-size: 2.2rem;
+    }
+    #map {
+        display: flex;
+        height: 70vh;
+    }
+    .schedule-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .schedule-box .order {
+        width: 50%;
+        max-width: 300px;
+    }
+    .schedule-box .horario {
+        width: 90%;
+        max-width: 600px;
+    }
+    .schedule-box img{
+        border-radius:10px 70px;
+    }
+}
+@media (max-width: 480px) {
+    #location {
+        display: flex;
+        justify-content: center;
+    }
 
+    #location h2 {
+        font-size: 2rem;
+    }
 
-
-  
+    #map {
+        display: flex;
+        height: 50vh;
+    }
+    .schedule {
+        padding: 0;
+    }
+    .schedule-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .schedule-box .order {
+        width: 80%;
+        max-width: 250px;
+    }
+    .schedule-box .horario {
+        width: 100%;
+        max-width: 550px;
+    }
+    .schedule-box img{
+        border-radius:10px 40px;
+    }
+}
