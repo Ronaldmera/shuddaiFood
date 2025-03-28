@@ -82,77 +82,76 @@
 .contact-item:hover{
     transform: scale(1.07);
 }
-
-@media (max-width: 480px) {
-    #contact h2{
-        font-size: 2rem;
-    }
-    .box{
-        display: flex;
-        justify-content:space-around;
-    }
-    .contact-item{
-        height:auto;
-        width: 150px;
-    }
-    .contact-item p{
-        font-size: 1.2rem;
-    }
-    .contact-item img{
-        width: 25px;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-    #contact h2{
-        font-size: 2.2rem;
-    }
-    .contact-item{
-        height:80px;
-        width: 180px;
-    }
-    .contact-item p{
-        font-size: 1.6rem;
-    }
-    .contact-item img{
-        width: 35px;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    #contact h2{
-        font-size: 2.5rem;
-    }
-    .contact-item{
-        height:100px;
-        width: 220px;
-    }
-    .contact-item p{
-        font-size: 1.7rem;
-    }
-    .contact-item img{
-        width: 40px;
+@media (min-width: 1441px) {
+    #contact {
+        min-height: 65vh;
     }
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
-    #contact h2{
+    #contact h2 {
         font-size: 2.8rem;
     }
-    .contact-item{
-        height:130px;
+    .contact-item {
+        height: 130px;
         width: 250px;
     }
-    .contact-item p{
+    .contact-item p {
         font-size: 1.7rem;
     }
-    .contact-item img{
+    .contact-item img {
         width: 45px;
     }
 }
 
-@media (min-width: 1441px) {
-    #contact{
-        min-height: 65vh;
+@media (min-width: 769px) and (max-width: 1024px) {
+    #contact h2 {
+        font-size: 2.5rem;
+    }
+    .contact-item {
+        height: 100px;
+        width: 220px;
+    }
+    .contact-item p {
+        font-size: 1.7rem;
+    }
+    .contact-item img {
+        width: 40px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    #contact h2 {
+        font-size: 2.2rem;
+    }
+    .contact-item {
+        height: 80px;
+        width: 180px;
+    }
+    .contact-item p {
+        font-size: 1.6rem;
+    }
+    .contact-item img {
+        width: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    #contact h2 {
+        font-size: 2rem;
+    }
+    .box {
+        display: flex;
+        justify-content: space-around;
+    }
+    .contact-item {
+        height: auto;
+        width: 150px;
+    }
+    .contact-item p {
+        font-size: 1.5rem;
+    }
+    .contact-item img {
+        width: 25px;
     }
 }
