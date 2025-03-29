@@ -77,6 +77,12 @@ header a.active {
   }
   
   /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .container {
+        padding: 1rem;
+        justify-content: space-between;
+    }
+  }
   @media (max-width: 768px) {
       .container {
           padding: 1rem;
