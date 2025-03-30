@@ -2,16 +2,43 @@ const hamburguer = document.querySelector('.hamburguer');
 const enlaces = document.querySelector('#nav-links');
 
 hamburguer.addEventListener('click', () => {
-    enlaces.classList.toggle('show');
-
-});
-// Cerrar el menú si se hace clic fuera de él
-document.addEventListener("click", function (event) {
-    if (!enlaces.contains(event.target) && !hamburguer.contains(event.target)) {
-        enlaces.classList.remove("show");
+    if (enlaces.classList.contains('active')) {
+        enlaces.style.opacity = '0';
+        enlaces.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+            enlaces.classList.remove('active');
+            enlaces.style.display = 'none';
+        }, 300); // Tiempo de la animación
+    } else {
+        enlaces.style.display = 'flex';
+        setTimeout(() => {
+            enlaces.classList.add('active');
+            enlaces.style.opacity = '1';
+            enlaces.style.transform = 'translateX(0)';
+        }, 10);
     }
 });
-//al tocar dar click en un enlcace se cierra el menu esto es ya que es una sola vista o pagina estatica
-enlaces.addEventListener('click', () => {
-    enlaces.classList.remove('show');
+
+// Cerrar el menú si se hace clic fuera de él
+document.addEventListener("click", (event) => {
+    if (!enlaces.contains(event.target) && !hamburguer.contains(event.target)) {
+        enlaces.style.opacity = '0';
+        enlaces.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+            enlaces.classList.remove('active');
+            enlaces.style.display = 'none';
+        }, 300);
+    }
+});
+
+// Cerrar el menú al hacer clic en un enlace
+enlaces.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        enlaces.style.opacity = '0';
+        enlaces.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+            enlaces.classList.remove('active');
+            enlaces.style.display = 'none';
+        }, 300);
+    });
 });
