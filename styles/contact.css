@@ -5,10 +5,9 @@
     overflow: hidden;
     position: relative;
     top: 7vh;
-    margin-bottom: 16vh;
+    margin-bottom: 7vh;
     height: 50vh;
     justify-content: center;
-    align-content: center;
     overflow: hidden;
 }
 /* Subtítulo de la sección contacto */
@@ -16,7 +15,7 @@
     font-size: 3rem;
     text-align: center;
     position: relative;
-    top: 2vh;
+    top: 4vh;
     margin-bottom: 10vh;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -105,12 +104,13 @@
 .contact-item p {
     font-size: 2rem;
     color: rgb(61, 58, 58);
+    font-family: quicksand;
 }
-
 /* Link de cada item */
 .contact-item a {
     color: black;
     text-decoration: none;
+    font-family: quicksand;
 }
 
 /* Icono de cada item */
@@ -147,6 +147,9 @@
         height: 100px;
         width: 220px;
     }
+    .box {
+        width: 90%;
+     }
     .contact-item p {
         font-size: 1.7rem;
     }
@@ -156,10 +159,10 @@
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-    #contact {
+    /* #contact {
         margin-bottom: 16vh;
         height: 40vh;
-    }
+    } */
     #contact h2 {
         font-size: 2.2rem;
     }
@@ -174,7 +177,7 @@
         width: 35px;
     }
     .box {
-        width: 100%;
+        width: 80%;
      }
      .inner{
         gap: 2rem;
