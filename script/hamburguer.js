@@ -1,15 +1,8 @@
-const hamburguer = document.querySelector('.hamburguer');
-const enlaces = document.querySelector('#nav-links');
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburguer = document.querySelector('.hamburguer');
+    const enlaces = document.querySelector('#nav-links');
 
-hamburguer.addEventListener('click', () => {
-    if (enlaces.classList.contains('active')) {
-        enlaces.style.opacity = '0';
-        enlaces.style.transform = 'translateX(100%)';
-        setTimeout(() => {
-            enlaces.classList.remove('active');
-            enlaces.style.display = 'none';
-        }, 300); // Tiempo de la animación
-    } else {
+    function showMenu() {
         enlaces.style.display = 'flex';
         setTimeout(() => {
             enlaces.classList.add('active');
@@ -17,28 +10,46 @@ hamburguer.addEventListener('click', () => {
             enlaces.style.transform = 'translateX(0)';
         }, 10);
     }
-});
 
-// Cerrar el menú si se hace clic fuera de él
-document.addEventListener("click", (event) => {
-    if (!enlaces.contains(event.target) && !hamburguer.contains(event.target)) {
+    function hideMenu() {
         enlaces.style.opacity = '0';
         enlaces.style.transform = 'translateX(100%)';
         setTimeout(() => {
             enlaces.classList.remove('active');
-            enlaces.style.display = 'none';
+            enlaces.style.display = window.innerWidth >= 768 ? 'flex' : 'none';
         }, 300);
     }
-});
 
-// Cerrar el menú al hacer clic en un enlace
-enlaces.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        enlaces.style.opacity = '0';
-        enlaces.style.transform = 'translateX(100%)';
-        setTimeout(() => {
-            enlaces.classList.remove('active');
+    hamburguer.addEventListener('click', () => {
+        if (enlaces.classList.contains('active')) {
+            hideMenu();
+        } else {
+            showMenu();
+        }
+    });
+
+    document.addEventListener("click", (event) => {
+        if (window.innerWidth < 768 && !enlaces.contains(event.target) && !hamburguer.contains(event.target)) {
+            hideMenu();
+        }
+    });
+
+    enlaces.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth < 768) {
+                hideMenu();
+            }
+        });
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) {
+            enlaces.style.display = 'flex';
+            enlaces.style.opacity = '1';
+            enlaces.style.transform = 'translateX(0)';
+        } else {
             enlaces.style.display = 'none';
-        }, 300);
+            enlaces.classList.remove('active');
+        }
     });
 });
