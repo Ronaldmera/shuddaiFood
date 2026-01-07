@@ -1,4 +1,4 @@
-let texto = "¡Bienvenidos a El Shuddai Food!";
+let texto = "Comida rápida que sí vale la pena";
 let index = 0;
 
 let mostrarTexto = () => {

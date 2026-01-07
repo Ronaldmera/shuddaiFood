@@ -13,13 +13,15 @@
   <meta name="robots" content="index, follow" />
   <!-- icono-->
   <link rel="icon" href="shuddai.ico" type="image/x-icon">
-  <!-- fuente quicksand-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-  <!-- script libreria header-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+  <!-- link bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 
   <!-- script leaflet mapa-->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -27,226 +29,255 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-  <!-- script libreria  AOS (Animate On Scroll)-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Swanky+and+Moo+Moo&display=swap"
-    rel="stylesheet">
-
-
   <!-- link stilos-->
   <link rel="stylesheet" href="styles/global.css" />
-  <link rel="stylesheet" href="styles/header.css" />
-  <link rel="stylesheet" href="styles/home.css" />
-  <link rel="stylesheet" href="styles/about-us.css">
-  <link rel="stylesheet" href="styles/menu.css" />
-  <link rel="stylesheet" href="styles/location.css">
-  <link rel="stylesheet" href="styles/contact.css">
-  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/specialties.css">
 
   <!-- script js-->
-  <script src="script/transition-header-click.js" defer></script>
   <script src="script/map.js" defer></script>
-  <script src="script/aos.js" defer></script>
-  <script src="script/hamburguer.js" defer></script>
   <script src="script/txtWelcome.js" defer></script>
-  <script src="script/carrusel.js" defer></script>
+
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <div class="title"><span>El</span> Shuddai <span>Food</span></div>
-      <nav>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#home">Inicio</a></li>
-          <li><a href="#about-us">Sobre Nosotros</a></li>
-          <li><a href="#menu">Menú</a></li>
-          <li><a href="#location">Ubicación</a></li>
-          <li><a href="#contact">Contacto</a></li>
+  <nav class="navbar navbar-expand-lg bg-light position-fixed top-0 z-3 w-100">
+    <div class="container-fluid container-lg">
+      <a class="navbar-brand title fs-4" href="#"><span>El</span> Shuddai <span>Food</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#nosotros">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#informacion">informacion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn bg-orange text-white d-none d-lg-block" href="#nosotros">Explorar</a>
+          </li>
         </ul>
-        <div class="hamburguer" id="hamburguer">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
+      </div>
     </div>
-  </header>
+  </nav>
   <!-- inicio-->
   <main>
-    <section id="home" data-aos="fade">
-
+    <section id="inicio">
       <picture>
         <source media="(min-width: 800px)" srcset="img/home/fondo-grande.webp">
         <source media="(min-width: 600px)" srcset="img/home/fondo-mediano.webp">
-        <source media="(min-width: 400px)" srcset="img/home/fondo-pequeño.webp">
         <img src="img/home/fondo-movil.webp" alt="Hamburguesa con papas fritas servidas en un plato de madera">
       </picture>
-      <div class="content">
-        <h1 id="welcome-title"></h1>
-        <div class="btn">
-          <a href="#menu">Ver Menú</a>
+      <div class="container">
+        <div class="content ">
+          <h1 id="welcome-title" class="text-white"></h1>
+          <p class=" fs-4 text-light-dark">Una experiencia de sabor auténtico que se disfruta desde el primer bocado.
+          </p>
+          <div class="px-0 justify-content-start d-flex">
+            <a href="#especialidades" class="btn bg-orange text-light">Explorar más</a>
+          </div>
         </div>
       </div>
     </section>
-    <div class="about-wrapper">
-      <section id="about-us">
-        <div class="inf">
-          <h2>Acerca de Nosotros</h2>
-          <p>En El Shuddai Food, nos apasiona la comida rápida de calidad. Ofrecemos hamburguesas, perros calientes,
-            papas
-            fritas y más, siempre preparados con ingredientes frescos y sabrosos. Nuestro compromiso es brindarte un
-            servicio rápido, un ambiente acogedor y, sobre todo, un sabor que te hará volver.
-
-            Si buscas una experiencia deliciosa y auténtica, El Shuddai Food es el lugar perfecto. ¡Te esperamos!</p>
+    <section id="nosotros" class="py-5">
+      <div class="container d-flex justify-content-center ">
+        <div class="row py-5 text-center">
+          <i class="bi bi-cup-hot fs-1 text-dark"></i>
+          <h2 class="fs-6 text-muted mb-3">Nosotros</h2>
+          <div class="container-text gap-4 d-flex flex-column">
+            <h3 class="fs-1 text-orange">Comida rápida hecha con el corazón</h3>
+            <p>Desde hace más de 5 años preparamos cada plato como si fuera para alguien que amamos. Nuestro
+              compromiso es simple: ingredientes frescos, atención genuina y comida que vale la pena.</p>
+          </div>
         </div>
-        <div class="about-img">
-          <img src="img/about-us/img-about.jpg" alt="">
+      </div>
+    </section>
+    <section id="especialidades" class="py-5">
+      <div class="container d-flex justify-content-center ">
+        <div class="row py-5 text-center">
+          <h2 class="fs-6 text-muted mb-3">Especialidades</h2>
+          <div class="gap-4 d-flex flex-column">
+            <h3 class="fs-1 text-orange">Lo que nos distingue</h3>
+            <p>Cada plato es preparado con cuidado y dedicación.</p>
+          </div>
         </div>
+      </div>
+      <div class="container">
+        <div class="row g-4 pb-5">
+          <div class="col-md-4">
+            <div class="food-card" style="background-image: url('img/specialties/hamburguesa.jpg');">
+              <div class="overlay">
+                <i class="bi bi-basket"></i>
+                <h3>Hamburguesas </h3>
+                <p>Preparadas con carne fresca y pan casero todos los días.</p>
+              </div>
+            </div>
+          </div>
 
-      </section>
-    </div>
-    <!-- menu-->
-    <section id="menu" data-aos="fade">
-      <h2>Menú</h2>
-      <div class="big-menu">
-        <div class="container-menu">
-          <div class="menu-item">
-            <img src="img/menu/mixta-desgranada.webp" alt="Mixta Desgranada">
-            <div class="item-info">
-              <h4>Mixta Desgranada</h4>
-              <p>Papas a la francesa, butifarra, chorizo, maíz, carne de cerdo y pollo, ripio, queso crema, vegetales y
-                salsas.</p>
-              <p class="price">$23.000 COP</p>
+          <div class="col-md-4">
+            <div class="food-card" style="background-image: url('img/specialties/papas.jpg');">
+              <div class="overlay">
+                <i class="bi bi-basket"></i>
+                <h3>Papas crujientes</h3>
+                <p>Cortadas y fritas al momento para garantizar la mejor textura.</p>
+              </div>
             </div>
           </div>
-          <div class="menu-item">
-            <img src="img/menu/sandwich-Sencillo.webp" alt="Sandwich Sencillo">
-            <div class="item-info">
-              <h4>Sandwich Sencillo</h4>
-              <p>Lechuga, queso mozzarella, mortadela, pan, ripio y salsas.</p>
-              <p class="price">$8.000 COP</p>
-            </div>
-          </div>
-          <div class="menu-item">
-            <img src="img/menu/desgranada-familiar.webp" alt="Desgranada Familiar">
-            <div class="item-info">
-              <h4>Desgranada Familiar</h4>
-              <p>Papas a la francesa, butifarra, chorizo, maíz, carne de cerdo y pollo, ripio, queso crema, vegetales y
-                salsas.</p>
-              <p class="price">$50.000 COP</p>
-            </div>
-          </div>
-          <div class="menu-item">
-            <img src="img/menu/picada-especial.webp" alt="Picada Especial">
-            <div class="item-info">
-              <h4>Picada Especial</h4>
-              <p>Papas a la francesa, butifarra, chorizo, maíz, mortadela, patacón, carne de cerdo y pollo, ripio, queso
-                crema, vegetales y salsas.</p>
-              <p class="price">$18.000 COP</p>
-            </div>
-          </div>
-          <div class="menu-item">
-            <img src="img/menu/sandwich-salvaje.webp" alt="Sandwich Salvaje">
-            <div class="item-info">
-              <h4>Sandwich Salvaje</h4>
-              <p>Butifarra, chorizo, maíz, mortadela, carne de cerdo y pollo, queso crema, vegetales y salsas.</p>
-              <p class="price">$15.000 COP</p>
-            </div>
-          </div>
-          <div class="menu-item">
-            <img src="img/menu/perro-plancha1.webp" alt="Perro a la Plancha">
-            <div class="item-info">
-              <h4>Perro a la Plancha</h4>
-              <p>Butifarra, chorizo, maíz, mortadela, tocino, carne de cerdo y pollo, queso crema, vegetales y salsas.
-              </p>
-              <p class="price">$16.000 COP</p>
+
+          <div class="col-md-4">
+            <div class="food-card" style="background-image: url('img/specialties/bebidas.jpg');">
+              <div class="overlay">
+                <i class="bi bi-basket"></i>
+                <h3>Bebidas refrescantes</h3>
+                <p>Selección de bebidas frías para acompañar tu comida favorita.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- ubicacion-->
-    <div class="location-wrapper">
-      <section id="location" data-aos="fade">
-        <h2>Nuestra Ubicación</h2>
-        <div id="map"></div>
-        <div class="schedule">
-          <h2>Horario de Atención</h2>
-          <div class="schedule-box">
-            <img class="order" src="img/location/img-pedido.jpg">
-            <img class="horario" src="img/location/horario.png" alt="">
+    <section id="informacion" class="py-5 bg-secondary">
+      <div class="container d-flex justify-content-center ">
+        <div class="row py-2 text-center">
+          <i class="bi bi-cup-hot fs-1 text-dark"></i>
+          <!-- <h2 class="fs-6 text-muted mb-3">Información del local</h2> -->
+          <div class="container-text gap-4 d-flex flex-column">
+            <h3 class="fs-1 text-orange">Pensado para ti</h3>
+            <p>
+              Conoce los detalles que hacen de cada visita una experiencia cómoda, cercana y especial.
+            </p>
           </div>
         </div>
-      </section>
-    </div>
-    <!-- contacto-->
-    <section id="contact" data-aos="fade">
-      <h2>Contáctanos</h2>
-      <div class="box">
-        <div class="inner">
-          <div class="contact-item">
-            <img src="/img/contact/phone.svg">
+      </div>
+      </div>
+      <div class="container">
+        <div class="row gap-4 text-center gap-md-0">
+          <div class="col-md-4">
+            <div class="">
+              <div class="">
+                <i class="bi bi-person-heart justify-content-center d-flex fs-1 mb-3 text-orange"></i>
+                <h3 class="text-center">Atención en local </h3>
+                <p class="text-muted">Te recibimos con una sonrisa y te atendemos con dedicación para que te sientas
+                  como
+                  en casa desde el
+                  primer momento.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="">
+              <div class="">
+                <i class="bi bi-clock-fill justify-content-center d-flex fs-1 mb-3 text-orange"></i>
+                <h3 class="text-center">Horarios </h3>
+                <p class="text-muted">Abrimos todos los días de <strong>5 pm a 11:30 pm</strong> con horarios pensados
+                  para adaptarse a tu
+                  rutina y acompañarte cuando más lo
+                  deseas.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="">
+              <div class="">
+                <i class="bi bi-heart-fill justify-content-center d-flex fs-1 mb-3 text-orange"></i>
+                <h3 class="text-center">Ambiente </h3>
+                <p class="text-muted">Un espacio cómodo y acogedor, ideal para compartir en familia o con amigos
+                  mientras disfrutas buena
+                  comida.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contacto" class="py-5">
+      <div class="container d-flex justify-content-center flex-wrap ">
+        <div class="col-12 col-md-5 ">
+          <h2 class="fs-6 text-muted mb-3">Contacto</h2>
+          <h3 class=" fs-1 text-orange">¿Dónde encontrarnos?</h3>
+          <p class="text-muted">Estamos aquí para recibirte con los brazos abiertos</p>
+          <div class="email pt-4">
+            <i class="bi bi-envelope text-orange fs-4"></i>
+            <p class="lead text-dark fw-semibold">Correo</p>
+            <p class="text-muted fs-6">Escríbenos cuando quieras</p>
+            <a href="mailto:Serluperca2028@gmail.com" class="text-dark">Serluperca2028@gmail.com</a>
+            <a href=""></a>
+          </div>
+          <div class="phone pt-4">
+            <i class="bi bi-telephone text-orange fs-4"></i>
+            <p class="lead text-dark fw-semibold">Teléfono</p>
+            <p class="text-muted fs-6">Llama para realizar tus pedidos</p>
             <p>+57 3044430547</p>
           </div>
-          <div class="contact-item">
-            <img src="/img/contact/location.svg">
-            <p>Carrera 13A #15-2, Tuchín, Córdoba</p>
+          <div class="location pt-4">
+            <i class="bi bi-geo-alt text-orange fs-4"></i>
+            <p class="lead text-dark fw-semibold">Ubicación</p>
+            <p class="text-muted fs-6">Carrera 13A #15-2, Tuchín, Córdoba</p>
           </div>
-          <div class="contact-item">
-            <a href="mailto:Serluperca2018@gmail.com">
-              <img src="/img/contact/email.svg" alt="Email">
-              <p>Serluperca2018@gmail.com</p>
-            </a>
-          </div>
-          <div class="contact-item">
-            <a href="https://www.facebook.com/ElShaddaifoodtuchin" target="_blank" rel="noopener noreferrer">
-              <img src="/img/contact/facebook.svg">
-              <p>ElShuddaifoodtuchin</p>
-            </a>
-          </div>
-          <div class="contact-item">
-            <a href="https://wa.me/+573044430547" target="_blank" rel="noopener noreferrer">
-              <img src="/img/contact/whatsapp.svg">
-              <p>+57 3044430547</p>
-            </a>
-          </div>
-          <div class="contact-item">
-            <a href="https://www.instagram.com/elshuddaifood?igsh=MXJmNzNneG1udXhxaw==" target="_blank"
-              rel="noopener noreferrer">
-              <img src="/img/contact/instagram.svg">
-              <p>elshuddaifood</p>
-            </a>
-          </div>
-          <div class="fade"></div>
         </div>
+        <div class="col-12 col-md-7 map" id="map">mapa</div>
       </div>
     </section>
-  </main>
-  <!-- footer-->
-  <footer>
-    <div class="first" data-aos="fade">
-      <img src="/img/contact/shaddai.webp" alt="icono Shuddai Food">
-      <p>
-        © 2025 El Shuddai Food. Todos los derechos reservados.</p>
+    <footer class="bg-dark text-light pt-5 pb-3">
+      <div class="container">
+        <div class="row align-items-center text-center text-md-start">
 
-    </div>
-    <div class="second">
-      <p>Siguenos en nuestras redes</p>
-      <div class="icons">
-        <a href="https://wa.me/+573044430547" target="_blank"><img src="img/footer/whatsapp.svg"></a>
-        <a href="https://www.facebook.com/ElShaddaifoodtuchin" target="_blank"><img src="img/footer/facebook.svg"></a>
-        <a href="https://www.instagram.com/elshuddaifood?igsh=MXJmNzNneG1udXhxaw==" target="_blank"><img
-            src="img/footer/instagram.svg"></a>
+          <!-- Logo y derechos -->
+          <div class="col-md-6 mb-4 mb-md-0">
+            <div class="d-flex flex-column flex-md-row align-items-center align-items-md-start gap-3">
+              <img src="/img/contact/shaddai.webp" alt="icono Shuddai Food" width="70">
+              <p class="mb-0">
+                © 2026 <strong>El Shuddai Food</strong><br>
+                Todos los derechos reservados.
+              </p>
+            </div>
+          </div>
+
+          <!-- Redes sociales -->
+          <div class="col-md-6 text-center text-md-end">
+            <p class="mb-2 fw-semibold">Síguenos en nuestras redes</p>
+            <div class="d-flex justify-content-center justify-content-md-end gap-3">
+
+              <a href="https://wa.me/+573044430547" target="_blank" class="footer-icon">
+                <img src="img/footer/whatsapp.svg" alt="WhatsApp" width="32">
+              </a>
+
+              <a href="https://www.facebook.com/ElShaddaifoodtuchin" target="_blank" class="footer-icon">
+                <img src="img/footer/facebook.svg" alt="Facebook" width="32">
+              </a>
+
+              <a href="https://www.instagram.com/elshuddaifood?igsh=MXJmNzNneG1udXhxaw==" target="_blank"
+                class="footer-icon">
+                <img src="img/footer/instagram.svg" alt="Instagram" width="32">
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+
+        <hr class="border-secondary my-4">
+
+        <div class="text-center small text-secondary">
+          Desarrollado por Ronald Dev
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+
+  </main>
+
+
 </body>
 
 </html>

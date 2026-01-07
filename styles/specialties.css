@@ -1,0 +1,48 @@
+.food-card {
+  position: relative;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  transition: all .2s ease-out;
+}
+
+.food-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.1)
+  );
+}
+.food-card .overlay {
+  position: relative;
+  color: #fff;
+  padding: 20px;
+  z-index: 1;
+}
+.food-card i {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.food-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.food-card p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+.food-card:hover{
+    transform: scale(1.05);
+}
+
+
