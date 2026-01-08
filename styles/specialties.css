@@ -7,18 +7,14 @@
   overflow: hidden;
   display: flex;
   align-items: flex-end;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .food-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.7),
-    rgba(0,0,0,0.1)
-  );
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
 }
 .food-card .overlay {
   position: relative;
@@ -41,8 +37,6 @@
   font-size: 0.9rem;
   opacity: 0.9;
 }
-.food-card:hover{
-    transform: scale(1.05);
+.food-card:hover {
+  transform: scale(1.05);
 }
-
-

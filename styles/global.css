@@ -1,106 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Swanky+and+Moo+Moo&family=Tagesschrift&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Swanky+and+Moo+Moo&family=Tagesschrift&display=swap');
-
-:root{
-    --color-orange:#E56A48;
-    --bg-secondary:#f7f6f4 !important;
+:root {
+  --color-orange: #e56a48;
+  --bg-secondary: #f7f6f4 !important;
 }
-.text-orange{
-    color: var(--color-orange);
+.text-orange {
+  color: var(--color-orange);
 }
-.text-light-dark{
-    color: rgb(215, 204, 204);
+.text-light-dark {
+  color: rgb(215, 204, 204);
 }
-.bg-orange{
-    background-color: var(--color-orange);
+.bg-orange {
+  background-color: var(--color-orange);
 }
 .bg-orange:hover {
   background-color: #cf5a3d !important;
 }
-.bg-secondary{
-    background-color: #F9F9F9 !important;
+.bg-secondary {
+  background-color: #f9f9f9 !important;
 }
 .container-text {
-  max-width: 650px;   
-  margin: 0 auto;     
+  max-width: 650px;
+  margin: 0 auto;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Poppins;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
 }
 html,
 body {
-    /* font-size: 62.5%; */
-    flex: 1;  
-    font-family: quicksand;
+  flex: 1;
+  font-family: quicksand;
+  overflow-x: hidden;
 }
 /* 
 Header */
 
 .title {
-color: var(--color-orange);
-font-family: "Swanky and Moo Moo", cursive;
-font-weight: bolder;
+  color: var(--color-orange);
+  font-family: "Swanky and Moo Moo", cursive;
+  font-weight: bolder;
 }
-.title span{
-color: rgb(85, 82, 82);
-font-weight: 100;
-font-family: "Swanky and Moo Moo", cursive;
-text-shadow: 0px 0px 1px #e2876d;
+.title span {
+  color: rgb(85, 82, 82);
+  font-weight: 100;
+  font-family: "Swanky and Moo Moo", cursive;
+  text-shadow: 0px 0px 1px #e2876d;
 }
 
 .title:hover {
-  color: var(--color-orange); 
+  color: var(--color-orange);
 }
 
 /* Home */
-#inicio{
-position: relative;
-top: 0vh;
-padding:15rem 0;
-overflow: hidden;
+#inicio {
+  position: relative;
+  top: 0vh;
+  padding: 15rem 0;
+  overflow: hidden;
 }
-#inicio picture, #inicio img {
+#inicio picture,
+#inicio img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1; 
+  z-index: 1;
 }
 #inicio .content {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    z-index: 2;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
 }
-#inicio .bg-orange{
-    transition: all .2s;
-    z-index: 200000;
+#inicio .bg-orange {
+  transition: all 0.2s;
+  z-index: 200000;
 }
-#inicio .bg-orange:hover{
-    transform: scale(1.02);
+#inicio .bg-orange:hover {
+  transform: scale(1.02);
 }
 /* About */
-#nosotros{
-    background-color: var(--bg-secondary);
+#nosotros {
+  background-color: var(--bg-secondary);
 }
 
 /* Contact */
-.map{
-    min-height: 20rem;
+.map {
+  min-height: 20rem;
 }
 /* iconos boton navbar */
 .navbar-toggler-icon {
-  transition: all .2s linear;
+  transition: all 0.2s linear;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
- 
 }
-.navbar-toggler-icon-close{
- transition: all .2s linear ;
- background-image: url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/x-lg.svg");
+.navbar-toggler-icon-close {
+  transition: all 0.2s linear;
+  background-image: url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/x-lg.svg");
 }
