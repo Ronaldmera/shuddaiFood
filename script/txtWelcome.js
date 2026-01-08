@@ -10,3 +10,11 @@ let mostrarTexto = () => {
 };
 
 mostrarTexto();
+
+
+//  manejo del icono del boton del Navbar en movil
+let btnNav = document.querySelector(".navbar-toggler")
+let ico = document.querySelector(".ico")
+btnNav.addEventListener('click',()=>{
+    ico.classList.toggle("navbar-toggler-icon-close");
+})
