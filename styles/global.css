@@ -23,6 +23,9 @@
   max-width: 650px;
   margin: 0 auto;
 }
+.text-gray {
+  color: #555555;
+}
 
 * {
   margin: 0;
@@ -36,6 +39,10 @@ body {
   font-family: quicksand;
   overflow-x: hidden;
 }
+nav {
+  z-index: 11111;
+}
+
 /* 
 Header */
 
@@ -54,13 +61,14 @@ Header */
 .title:hover {
   color: var(--color-orange);
 }
-
 /* Home */
 #inicio {
   position: relative;
-  top: 0vh;
-  padding: 15rem 0;
+  top: 5dvh;
+  display: flex;
+  align-items: center;
   overflow: hidden;
+  min-height: 80dvh;
 }
 #inicio picture,
 #inicio img {
@@ -85,14 +93,33 @@ Header */
 #inicio .bg-orange:hover {
   transform: scale(1.02);
 }
+#inicio .text-home {
+  line-height: 25px;
+}
+#inicio #welcome-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: bolder;
+}
 /* About */
 #nosotros {
-  background-color: var(--bg-secondary);
+  background: linear-gradient(
+    90deg,
+    #f5f5f5,
+    #f5f5f5,
+    rgba(229, 106, 72, 0.15)
+  );
+}
+
+#nosotros .img img {
+  max-height: 40rem;
+  object-fit: cover;
+  max-width: 90%;
 }
 
 /* Contact */
 .map {
   min-height: 20rem;
+  z-index: 1;
 }
 /* iconos boton navbar */
 .navbar-toggler-icon {
