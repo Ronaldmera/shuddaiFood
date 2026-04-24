@@ -36,3 +36,7 @@ ScrollReveal({ reset: false }).reveal(".text-animation2", {
 ScrollReveal({ reset: false }).reveal(".text-animation-fade", {
   delay: 300,
 });
+// año dinamico en el footer
+let dateContainer = document.querySelector("#date");
+let year = new Date().getFullYear();
+dateContainer.textContent = year;

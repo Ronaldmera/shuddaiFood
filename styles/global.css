@@ -103,16 +103,18 @@ Header */
   font-weight: bolder;
 }
 /* About */
-#nosotros .container-rounded {
-  /* background-image: linear-gradient(to right bottom, #ef8354, #ef8354, #f9f2ef);
-  box-shadow: 7px 10px 10px rgb(162, 161, 161); */
-}
 
 #nosotros .img img {
   object-fit: cover;
   max-width: 100%;
 }
 /* information */
+#informacion {
+  background-image: url("../img/menu/fondo2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 #informacion .img-persona {
   max-width: 60%;
   filter: drop-shadow(1px 5px 1px var(--color-orange));
