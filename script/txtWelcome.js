@@ -10,12 +10,24 @@ let mostrarTexto = () => {
 };
 
 mostrarTexto();
-
 //  manejo del icono del boton del Navbar en movil
+const mainElement = document.querySelector("main");
 let btnNav = document.querySelector(".navbar-toggler");
 let ico = document.querySelector(".ico");
 btnNav.addEventListener("click", () => {
   ico.classList.toggle("navbar-toggler-icon-close");
+  mainElement.classList.toggle("overlay-active"); //agregando o eliminando overlay al main
+});
+// cerrar el menu en movil al dar click en nav-links
+let navbar = document.querySelector("#navbarNavDropdown");
+let navLinks = document.querySelectorAll(".nav-link");
+
+navLinks.forEach((navLink) => {
+  navLink.addEventListener("click", () => {
+    navbar.classList.remove("show");
+    ico.classList.toggle("navbar-toggler-icon-close");
+    mainElement.classList.toggle("overlay-active"); //agregando o eliminando overlay al main
+  });
 });
 
 // animacione scrollReveal
