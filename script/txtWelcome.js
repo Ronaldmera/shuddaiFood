@@ -16,19 +16,23 @@ let btnNav = document.querySelector(".navbar-toggler");
 let ico = document.querySelector(".ico");
 btnNav.addEventListener("click", () => {
   ico.classList.toggle("navbar-toggler-icon-close");
-  mainElement.classList.toggle("overlay-active"); //agregando o eliminando overlay al main
+  if (!mainElement.classList.contains("overlay-active")) {
+    mainElement.classList.add("overlay-active"); //agregando overlay al main
+  } else {
+    mainElement.classList.remove("overlay-active");
+  }
 });
-// cerrar el menu en movil al dar click en nav-links
-let navbar = document.querySelector("#navbarNavDropdown");
-let navLinks = document.querySelectorAll(".nav-link");
 
-navLinks.forEach((navLink) => {
-  navLink.addEventListener("click", () => {
-    navbar.classList.remove("show");
-    ico.classList.toggle("navbar-toggler-icon-close");
-    mainElement.classList.toggle("overlay-active"); //agregando o eliminando overlay al main
-  });
-});
+// cerrar el menu en movil al dar click en nav-links
+// let navbar = document.querySelector("#navbarNavDropdown");
+// let navLinks = document.querySelectorAll(".nav-link");
+
+// navLinks.forEach((navLink) => {
+//   navLink.addEventListener("click", () => {
+//     navbar.classList.remove("show");
+//     ico.classList.toggle("navbar-toggler-icon-close");
+//   });
+// });
 
 // animacione scrollReveal
 ScrollReveal({ reset: false }).reveal(".text-animation", {
