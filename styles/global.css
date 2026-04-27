@@ -65,14 +65,18 @@ body {
 /* Navbar */
 nav {
   z-index: 11111;
+  border-bottom: 2px solid var(--bg-secondary);
 }
 /* color texto nav-link */
 .navbar .nav-link {
-  color: #333;
+  color: #656464;
 }
 /* color icono nav-link */
 .navbar .nav-link i {
   color: rgba(239, 131, 84, 0.7);
+}
+.navbar .nav-link:hover {
+  color: #333;
 }
 @media (max-width: 991px) {
   nav ul li {
